@@ -1,0 +1,19 @@
+{
+  "name": "archiverif-sdk-project",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TypeScript SDK for the ArchiVerif API, generated using the Voxgig SDK tooling.",
+  "license": "MIT",
+  "author": "Mohaned Bouzaidi",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "setup": "npm --prefix .sdk ci && npm run generate && npm --prefix ts ci",
+    "spec": "node scripts/prepare-spec.mjs",
+    "generate": "npm run spec && npm --prefix .sdk run generate",
+    "build": "npm --prefix ts run build",
+    "typecheck": "npm --prefix ts run typecheck",
+    "test": "npm --prefix ts test && node --test .sdk/build/windows-paths.test.cjs",
+    "doctor": "npm --prefix .sdk run doctor",
+    "pack:sdk": "npm pack ./ts --pack-destination ."
+  }
+}
