@@ -11,11 +11,11 @@ Implementation is reviewed in three focused branches. Each builds on the previou
 one; the final branch contains the complete deliverable. Changes remain in pull
 requests until reviewed and merged.
 
-| Review area | Branch |
+| Review area | Pull request / branch |
 | --- | --- |
-| Reproducible generation and SDK source | [feat/sdk](https://github.com/MohanedB/archiverif-sdk-voxgig/tree/feat/sdk) |
-| HTTP contracts and Linux/Windows CI | [test/validation](https://github.com/MohanedB/archiverif-sdk-voxgig/tree/test/validation) |
-| Usage examples and experience report | [docs/experience](https://github.com/MohanedB/archiverif-sdk-voxgig/tree/docs/experience) |
+| Reproducible generation and SDK source | [#1](https://github.com/MohanedB/archiverif-sdk-voxgig/pull/1) · `feat/sdk` |
+| HTTP contracts and Linux/Windows CI | [#2](https://github.com/MohanedB/archiverif-sdk-voxgig/pull/2) · `test/validation` |
+| Usage examples and experience report | `docs/experience` |
 
 The SDK is not published to npm. Its local package name is
 `@mohanedb/archiverif-sdk`.
@@ -84,6 +84,8 @@ Known generator limitations include weak nullable-field types and an empty
 watchlist interface. Successful live authentication has not been verified without
 a usable client key. The [experience report](https://github.com/MohanedB/archiverif-sdk-voxgig/blob/docs/experience/VOXGIG_REPORT.md)
 records actual setup, test results, workarounds and suggested improvements.
+See [DEVELOPMENT.md](DEVELOPMENT.md) for regeneration, package validation and
+toolchain upgrades.
 
 ## License
 
