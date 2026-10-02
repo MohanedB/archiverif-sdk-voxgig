@@ -1,0 +1,27 @@
+{
+  "name": "build-archiverif-sdk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pinned Voxgig generator for the ArchiVerif TypeScript SDK",
+  "scripts": {
+    "postinstall": "node build/windows-paths.cjs",
+    "bootstrap": "node build/bootstrap.cjs",
+    "generate": "npm run bootstrap && tsc --build src && voxgig-model model/sdk.aontu && voxgig-model test/test.aontu",
+    "doctor": "voxgig-sdkgen doctor"
+  },
+  "author": "Mohaned Bouzaidi",
+  "license": "MIT",
+  "engines": { "node": ">=24" },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "typescript": "7.0.2",
+    "@voxgig/create-sdkgen": "0.30.6",
+    "@voxgig/apidef": "8.22.1",
+    "@voxgig/model": "12.0.0",
+    "@voxgig/sdkgen": "4.34.0",
+    "@voxgig/util": "0.5.8",
+    "@voxgig/struct": "0.3.6",
+    "jostraca": "0.39.0",
+    "aontu": "0.76.0"
+  }
+}

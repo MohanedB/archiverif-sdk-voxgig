@@ -29,5 +29,6 @@ visit(spec.paths);
 spec.components.schemas = Object.fromEntries(
   Object.entries(spec.components.schemas).filter(([name]) => refs.has(name)),
 );
+fs.mkdirSync(new URL('../.sdk/def/', import.meta.url), { recursive: true });
 fs.writeFileSync(new URL('../.sdk/def/openapi.readonly.json', import.meta.url), JSON.stringify(spec, null, 2) + '\n');
 console.log(`Prepared ${selected.length} GET operations and ${refs.size} original schemas.`);
