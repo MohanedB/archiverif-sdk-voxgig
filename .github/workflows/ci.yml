@@ -1,0 +1,33 @@
+name: SDK validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm run setup
+      - name: Verify regeneration restores missing source
+        run: |
+          node -e "require('node:fs').unlinkSync('ts/src/ArchiverifSDK.ts')"
+          npm run generate
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run check:drift
+      - run: npm run test:package
+      - name: Check tracked generation output is stable
+        run: git diff --exit-code
