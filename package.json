@@ -14,6 +14,7 @@
     "typecheck": "npm --prefix ts run typecheck",
     "test": "npm --prefix ts test && node --test tests/*.test.cjs .sdk/build/windows-paths.test.cjs",
     "smoke": "node --env-file-if-exists=.env scripts/smoke.mjs",
+    "example": "node --env-file-if-exists=.env examples/document-types.mjs",
     "test:package": "node scripts/package-smoke.cjs",
     "check:drift": "node scripts/check-drift.cjs",
     "doctor": "npm --prefix .sdk run doctor",
