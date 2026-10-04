@@ -4,7 +4,7 @@
 
 ## Install
 
-The package is not published to npm. From a clone of the complete `docs/experience` branch of [the repository](https://github.com/MohanedB/archiverif-sdk-voxgig), run:
+The package is not published to npm. From a clone of [the repository](https://github.com/MohanedB/archiverif-sdk-voxgig), run these commands at the repository root:
 
 ```sh
 npm run setup
@@ -82,6 +82,6 @@ Several nullable properties currently generate as `any`, and the generated `Watc
 
 Use the repository-root setup before development. It restores pinned generator components, templates, and test inputs. `npm run generate` updates the checked-in runtime source and creates ignored generated tests; `npm run build`, `npm run typecheck`, and `npm test` compile and validate them. Make API-shape changes in the specification/model and lasting generator changes in tracked overrides.
 
-See the [development guide](https://github.com/MohanedB/archiverif-sdk-voxgig/blob/docs/experience/DEVELOPMENT.md) for the tracked/generated layout and upgrade process. The [experience report](https://github.com/MohanedB/archiverif-sdk-voxgig/blob/docs/experience/VOXGIG_REPORT.md) records validation and Windows workarounds. Successful live authenticated responses remain unverified without a usable client key.
+See the [development guide](https://github.com/MohanedB/archiverif-sdk-voxgig/blob/main/DEVELOPMENT.md) for the tracked/generated layout and upgrade process. The [experience report](https://github.com/MohanedB/archiverif-sdk-voxgig/blob/main/VOXGIG_REPORT.md) records validation and Windows workarounds. Successful live authenticated responses remain unverified without a usable client key.
 
 MIT licensed. Preserve [LICENSE](LICENSE) and [NOTICE](NOTICE) when redistributing the package.

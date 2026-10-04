@@ -5,27 +5,26 @@ licence and company-monitoring service. Generated with the
 [Voxgig SDK tooling](https://voxgig.com/sdk) from the service's actual FastAPI
 OpenAPI 3.1 description. Also usable from JavaScript on Node.js 24+.
 
-## Project status
+## Project overview
 
-Implementation is reviewed in three focused branches. Each builds on the previous
-one; the final branch contains the complete deliverable. Changes remain in pull
-requests until reviewed and merged.
+The implementation is organized into three focused contributions, with separate
+pull requests for the SDK, validation, and documentation.
 
-| Review area | Pull request / branch |
+| Contribution | Pull request |
 | --- | --- |
-| Reproducible generation and SDK source | [#1](https://github.com/MohanedB/archiverif-sdk-voxgig/pull/1) · `feat/sdk` |
-| HTTP contracts and Linux/Windows CI | [#2](https://github.com/MohanedB/archiverif-sdk-voxgig/pull/2) · `test/validation` |
-| Usage examples and experience report | `docs/experience` |
+| Reproducible generation and SDK source | [#1](https://github.com/MohanedB/archiverif-sdk-voxgig/pull/1) |
+| HTTP contracts and Linux/Windows CI | [#2](https://github.com/MohanedB/archiverif-sdk-voxgig/pull/2) |
+| Usage examples and experience report | [#3](https://github.com/MohanedB/archiverif-sdk-voxgig/pull/3) |
 
 The SDK is not published to npm. Its local package name is
 `@mohanedb/archiverif-sdk`.
 
 ## Install and run
 
-Use the complete branch while the pull requests are under review:
+Clone the repository and build the SDK locally:
 
 ```sh
-git clone --branch docs/experience https://github.com/MohanedB/archiverif-sdk-voxgig.git
+git clone https://github.com/MohanedB/archiverif-sdk-voxgig.git
 cd archiverif-sdk-voxgig
 npm run setup
 npm run build
@@ -82,7 +81,7 @@ example with `npm run example`. Never commit `.env`.
 
 Known generator limitations include weak nullable-field types and an empty
 watchlist interface. Successful live authentication has not been verified without
-a usable client key. The [experience report](https://github.com/MohanedB/archiverif-sdk-voxgig/blob/docs/experience/VOXGIG_REPORT.md)
+a usable client key. The [experience report](https://github.com/MohanedB/archiverif-sdk-voxgig/blob/main/VOXGIG_REPORT.md)
 records actual setup, test results, workarounds and suggested improvements.
 See [DEVELOPMENT.md](DEVELOPMENT.md) for regeneration, package validation and
 toolchain upgrades.

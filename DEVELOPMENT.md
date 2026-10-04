@@ -6,10 +6,8 @@ This repository uses the Voxgig generator for four read-only ArchiVerif operatio
 
 Node.js 24 or later, npm, and Git are required. Setup downloads the locked development dependencies and pinned scaffolder; it does not need an ArchiVerif API key.
 
-The complete implementation is on `docs/experience` while the three stacked pull requests are under review:
-
 ```sh
-git clone --branch docs/experience https://github.com/MohanedB/archiverif-sdk-voxgig.git
+git clone https://github.com/MohanedB/archiverif-sdk-voxgig.git
 cd archiverif-sdk-voxgig
 npm run setup
 npm run generate
@@ -80,12 +78,12 @@ Validate an upgrade in a fresh clone on Linux and Windows, check regeneration st
 
 For the bundled example, copy `.env.example` to `.env`, supply your key, and run `npm run example`. The ordinary test suite stays offline. Never commit `.env` or a real client key.
 
-## Review sequence
+## Review history
 
-| Branch | Pull request base | Scope |
+The work is split into three contributions so the generator, validation, and documentation can be reviewed separately.
+
+| Pull request | Original branch | Scope |
 | --- | --- | --- |
-| `feat/sdk` | `main` | Bootstrap, specification/model, and generated SDK source. |
-| `test/validation` | `feat/sdk` | HTTP contracts, regression checks, and Linux/Windows CI. |
-| `docs/experience` | `test/validation` | Usage examples and experience report. |
-
-The final branch contains the complete project. The pull requests remain unmerged until Mohaned authorizes merging.
+| [#1](https://github.com/MohanedB/archiverif-sdk-voxgig/pull/1) | `feat/sdk` | Bootstrap, specification/model, and generated SDK source. |
+| [#2](https://github.com/MohanedB/archiverif-sdk-voxgig/pull/2) | `test/validation` | HTTP contracts, regression checks, and Linux/Windows CI. |
+| [#3](https://github.com/MohanedB/archiverif-sdk-voxgig/pull/3) | `docs/experience` | Usage examples and experience report. |
