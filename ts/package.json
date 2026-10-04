@@ -1,0 +1,56 @@
+{
+  "name": "@mohanedb/archiverif-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for the ArchiVerif API, generated using the Voxgig SDK tooling.",
+  "keywords": [
+    "voxgig",
+    "sdk",
+    "generated-sdk",
+    "openapi",
+    "api-client",
+    "archiverif"
+  ],
+  "homepage": "https://github.com/MohanedB/archiverif-sdk-voxgig#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohanedB/archiverif-sdk-voxgig.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MohanedB/archiverif-sdk-voxgig/issues"
+  },
+  "main": "dist/ArchiverifSDK.js",
+  "type": "commonjs",
+  "types": "dist/ArchiverifSDK.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "scripts",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "pretest": "npm run build",
+    "test": "node --enable-source-maps --test-concurrency=1 --test \"dist-test/**/*.test.js\"",
+    "typecheck": "tsc --build src && tsc --project src --noEmit && tsc --project test --noEmit",
+    "watch": "tsc --build src test -w",
+    "build": "node scripts/clean.cjs && tsc --build src test",
+    "build:runtime": "node scripts/clean.cjs --runtime && tsc --build src",
+    "prepack": "npm run build:runtime",
+    "clean": "node scripts/clean.cjs"
+  },
+  "author": {
+    "name": "Mohaned Bouzaidi",
+    "url": "https://github.com/MohanedB"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "typescript": "^5.9.3"
+  }
+}

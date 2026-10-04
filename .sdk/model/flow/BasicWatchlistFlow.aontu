@@ -1,0 +1,28 @@
+# BasicWatchlistFlow
+
+main: kit: flow: BasicWatchlistFlow:
+{
+  entity: "watchlist",
+  kind: "basic",
+  name: "BasicWatchlistFlow",
+  step: [
+    {
+      i: {
+        ref: "watchlist_ref01",
+        srcdatavar: "watchlist_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-watchlist_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicWatchlistFlow"
+}

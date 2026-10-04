@@ -1,0 +1,6 @@
+# Flows
+
+@"./BasicDocumentTypeFlow.aontu"
+@"./BasicKeyInfoFlow.aontu"
+@"./BasicVerifyFlow.aontu"
+@"./BasicWatchlistFlow.aontu"

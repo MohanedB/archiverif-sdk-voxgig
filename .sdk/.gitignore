@@ -1,0 +1,18 @@
+# Dependencies and reproducible upstream scaffold copies
+node_modules/
+.cache/
+src/
+tm/
+test/
+dist/
+dist-test/
+log/
+doc/
+.jostraca/
+sdkgen-copies.json
+*.tsbuildinfo
+*.log
+model/sdk.json
+model/.model-config/
+def/*.json
+def/*.full.json

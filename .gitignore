@@ -21,6 +21,8 @@ node_modules/
 .sdk/def/*.full.json
 ts/dist/
 ts/dist-test/
-ts/test/
+ts/test/*
 !ts/test/sdk-test-control.json
+ts/.gitignore
+ts/Makefile
 .DS_Store

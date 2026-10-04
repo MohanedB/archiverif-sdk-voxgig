@@ -1,0 +1,154 @@
+# Entity: document_type
+
+main: kit: entity: document_type: {
+
+  alias: field: {}
+
+  fields: {
+    code: {
+      h: "Code"
+      n: "code"
+      r: true
+      t: "`$STRING`"
+    }
+    is_active: {
+      h: "Is Active"
+      n: "is_active"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    jurisdiction: {
+      h: "Jurisdiction"
+      n: "jurisdiction"
+      r: false
+      t: "`$ANY`"
+    }
+    label_en: {
+      h: "Label En"
+      n: "label_en"
+      r: true
+      t: "`$STRING`"
+    }
+    label_fr: {
+      h: "Label Fr"
+      n: "label_fr"
+      r: true
+      t: "`$STRING`"
+    }
+    order: {
+      h: "Order"
+      n: "order"
+      r: true
+      t: "`$INTEGER`"
+    }
+    parsed: {
+      h: "Parsed"
+      n: "parsed"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    requestable: {
+      h: "Requestable"
+      n: "requestable"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    reuse_eligible: {
+      h: "Reuse Eligible"
+      n: "reuse_eligible"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    short_en: {
+      h: "Short En"
+      n: "short_en"
+      r: true
+      t: "`$STRING`"
+    }
+    short_fr: {
+      h: "Short Fr"
+      n: "short_fr"
+      r: true
+      t: "`$STRING`"
+    }
+    validity_hint_en: {
+      h: "Validity Hint En"
+      n: "validity_hint_en"
+      r: false
+      t: "`$ANY`"
+    }
+    validity_hint_fr: {
+      h: "Validity Hint Fr"
+      n: "validity_hint_fr"
+      r: false
+      t: "`$ANY`"
+    }
+    verify_note_en: {
+      h: "Verify Note En"
+      n: "verify_note_en"
+      r: false
+      t: "`$ANY`"
+    }
+    verify_note_fr: {
+      h: "Verify Note Fr"
+      n: "verify_note_fr"
+      r: false
+      t: "`$ANY`"
+    }
+    verify_url: {
+      h: "Verify Url"
+      n: "verify_url"
+      r: false
+      t: "`$ANY`"
+    }
+  }
+
+  name: "document_type"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/document-types"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "jurisdiction"
+                or: "jurisdiction"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/document-types"
+          q: {
+            exist: [
+              "jurisdiction"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "document-types"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

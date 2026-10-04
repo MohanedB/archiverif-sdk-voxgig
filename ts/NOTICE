@@ -1,0 +1,10 @@
+ArchiVerif SDK project additions: Copyright (c) 2026 Mohaned Bouzaidi.
+
+Generated SDK code and copied generator templates/components are derived from
+the MIT-licensed Voxgig SDK tooling. Copyright (c) 2026 Voxgig. Upstream
+copyright notices, including notices for vendored utilities, are retained.
+The MIT permission and warranty terms in LICENSE apply to this project.
+
+The SDK does not redistribute registry records. API-provided source attribution
+is preserved by the generated client. RBQ data identifies the Régie du bâtiment
+du Québec (CC BY 4.0); RENA data identifies the Autorité des marchés publics (AMP).

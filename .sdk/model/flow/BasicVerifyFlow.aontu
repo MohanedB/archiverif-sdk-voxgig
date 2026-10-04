@@ -1,0 +1,32 @@
+# BasicVerifyFlow
+
+main: kit: flow: BasicVerifyFlow:
+{
+  entity: "verify",
+  kind: "basic",
+  name: "BasicVerifyFlow",
+  step: [
+    {
+      i: {
+        ref: "verify_ref01",
+        srcdatavar: "verify_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "verify01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-verify_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicVerifyFlow"
+}

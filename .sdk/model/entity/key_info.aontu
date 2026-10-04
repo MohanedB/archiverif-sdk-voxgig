@@ -1,0 +1,76 @@
+# Entity: key_info
+
+main: kit: entity: key_info: {
+
+  alias: field: {}
+
+  fields: {
+    created_at: {
+      fo: "date-time"
+      h: "Created At"
+      n: "created_at"
+      r: true
+      t: "`$STRING`"
+    }
+    key_preview: {
+      h: "Key Preview"
+      n: "key_preview"
+      r: true
+      t: "`$STRING`"
+    }
+    last_used_at: {
+      h: "Last Used At"
+      n: "last_used_at"
+      r: true
+      t: "`$ANY`"
+    }
+    plan: {
+      h: "Plan"
+      n: "plan"
+      r: true
+      t: "`$STRING`"
+    }
+    rate_limit_per_minute: {
+      h: "Rate Limit Per Minute"
+      n: "rate_limit_per_minute"
+      r: true
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "key_info"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/keys/me"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/v1/keys/me"
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "keys"
+            }
+            {
+              lit: "me"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

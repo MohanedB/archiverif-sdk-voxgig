@@ -1,0 +1,234 @@
+# Entity: verify
+
+main: kit: entity: verify: {
+
+  alias: field: {}
+
+  fields: {
+    address: {
+      h: "Address"
+      n: "address"
+      r: true
+      t: "`$ANY`"
+    }
+    autre_nom: {
+      h: "Autre Nom"
+      n: "autre_nom"
+      r: true
+      t: "`$ANY`"
+    }
+    bond_amount: {
+      h: "Bond Amount"
+      n: "bond_amount"
+      r: true
+      t: "`$ANY`"
+    }
+    bond_company: {
+      h: "Bond Company"
+      n: "bond_company"
+      r: true
+      t: "`$ANY`"
+    }
+    categories: {
+      h: "Categories"
+      n: "categories"
+      r: true
+      t: "`$ARRAY`"
+    }
+    company_name: {
+      h: "Company Name"
+      n: "company_name"
+      r: true
+      t: "`$ANY`"
+    }
+    date_debut_restriction: {
+      h: "Date Debut Restriction"
+      n: "date_debut_restriction"
+      r: true
+      t: "`$ANY`"
+    }
+    date_delivrance: {
+      h: "Date Delivrance"
+      n: "date_delivrance"
+      r: true
+      t: "`$ANY`"
+    }
+    date_fin_restriction: {
+      h: "Date Fin Restriction"
+      n: "date_fin_restriction"
+      r: true
+      t: "`$ANY`"
+    }
+    date_paiement_annuel: {
+      h: "Date Paiement Annuel"
+      n: "date_paiement_annuel"
+      r: true
+      t: "`$ANY`"
+    }
+    email: {
+      h: "Email"
+      n: "email"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    is_active_today: {
+      h: "Is Active Today"
+      n: "is_active_today"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    last_seen: {
+      fo: "date"
+      h: "Last Seen"
+      n: "last_seen"
+      r: true
+      t: "`$STRING`"
+    }
+    licence_id: {
+      h: "Licence Id"
+      n: "licence_id"
+      r: true
+      t: "`$STRING`"
+    }
+    mandataire: {
+      h: "Mandataire"
+      n: "mandataire"
+      r: true
+      t: "`$ANY`"
+    }
+    municipalite: {
+      h: "Municipalite"
+      n: "municipalite"
+      r: true
+      t: "`$ANY`"
+    }
+    neq: {
+      h: "Neq"
+      n: "neq"
+      r: true
+      t: "`$ANY`"
+    }
+    nombre_sous_categories: {
+      h: "Nombre Sous Categories"
+      n: "nombre_sous_categories"
+      r: true
+      t: "`$ANY`"
+    }
+    phone: {
+      h: "Phone"
+      n: "phone"
+      r: true
+      t: "`$ANY`"
+    }
+    region: {
+      h: "Region"
+      n: "region"
+      r: true
+      t: "`$ANY`"
+    }
+    restriction: {
+      h: "Restriction"
+      n: "restriction"
+      r: true
+      t: "`$ANY`"
+    }
+    source: {
+      h: "Source"
+      n: "source"
+      r: false
+      t: "`$STRING`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: true
+      t: "`$STRING`"
+    }
+    statut_juridique: {
+      h: "Statut Juridique"
+      n: "statut_juridique"
+      r: true
+      t: "`$ANY`"
+    }
+    suspended_since: {
+      h: "Suspended Since"
+      n: "suspended_since"
+      r: true
+      t: "`$ANY`"
+    }
+    type_licence: {
+      h: "Type Licence"
+      n: "type_licence"
+      r: true
+      t: "`$ANY`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "verify"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/verify/{licence_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "licence_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/verify/{licence_id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              licence_id: "id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "verify"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

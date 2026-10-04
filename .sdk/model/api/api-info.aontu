@@ -1,0 +1,32 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        email: "mohanedb@archiverif.ca"
+        name: "ArchiVerif"
+      }
+      description: "Québec construction-compliance monitoring: RBQ contractor-licence verification plus RENA (AMP) ineligibility status, with a company watchlist keyed on NEQ. Sources: Régie du bâtiment du Québec (CC BY 4.0) and Autorité des marchés publics (AMP)."
+      security: {
+        in: "header"
+        name: "X-Client-Key"
+        prefix: ""
+        scheme: "ClientKey"
+        type: "apiKey"
+      }
+      servers: [
+        {
+          url: "https://verifrbq-backend-production.up.railway.app"
+        }
+      ]
+      summary: "Québec construction-compliance monitoring: RBQ contractor-licence verification plus RENA (AMP) ineligibility status, with a company watchlist keyed on NEQ."
+      termsOfService: "https://archiverif.ca/terms"
+      title: "ArchiVerif API"
+      version: "1.0.0"
+      website: "https://verifrbq-backend-production.up.railway.app"
+    }
+  }
+}
+

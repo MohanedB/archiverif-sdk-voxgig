@@ -1,1 +1,4 @@
 * text=auto eol=lf
+ts/src/** linguist-generated=true
+.sdk/model/entity/** linguist-generated=true
+.sdk/model/flow/** linguist-generated=true

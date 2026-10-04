@@ -1,0 +1,22 @@
+# BasicDocumentTypeFlow
+
+main: kit: flow: BasicDocumentTypeFlow:
+{
+  entity: "document_type",
+  kind: "basic",
+  name: "BasicDocumentTypeFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "document_type_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicDocumentTypeFlow"
+}
