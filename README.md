@@ -75,13 +75,15 @@ compiled JavaScript are recreated locally instead of stored in Git.
 
 `npm run generate` rebuilds from the specification. `npm test` runs generated
 offline suites and focused HTTP contract tests. `npm run smoke` makes a few safe
-live GET requests; successful authenticated validation requires a real client key.
-Copy `.env.example` to `.env` and replace the placeholder to run the bundled
+live GET requests; with `ARCHIVERIF_API_KEY` set, it also makes one authenticated
+request. Copy `.env.example` to `.env` and replace the placeholder to run the bundled
 example with `npm run example`. Never commit `.env`.
 
 Known generator limitations include weak nullable-field types and an empty
-watchlist interface. Successful live authentication has not been verified without
-a usable client key. The [experience report](https://github.com/MohanedB/archiverif-sdk-voxgig/blob/main/VOXGIG_REPORT.md)
+watchlist interface. Authenticated access was verified live on 4 October 2026: with
+a real client key, the generated client read the production document-type catalogue.
+The verify, watchlist and key-info operations have not been exercised against
+production. The [experience report](https://github.com/MohanedB/archiverif-sdk-voxgig/blob/main/VOXGIG_REPORT.md)
 records actual setup, test results, workarounds and suggested improvements.
 See [DEVELOPMENT.md](DEVELOPMENT.md) for regeneration, package validation and
 toolchain upgrades.
