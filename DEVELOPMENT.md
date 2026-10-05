@@ -74,7 +74,7 @@ Validate an upgrade in a fresh clone on Linux and Windows, check regeneration st
 
 ## Optional live checks
 
-`npm run smoke` performs bounded live GET probes. It checks health and authentication rejection; with `ARCHIVERIF_API_KEY` set, it also reads the document-type catalogue. It suppresses credentials and response bodies. An absent usable key leaves authenticated success unverified.
+`npm run smoke` performs bounded live GET probes. It checks health and authentication rejection; with `ARCHIVERIF_API_KEY` set, it also reads the document-type catalogue. It suppresses credentials and response bodies. Without a key it skips the authenticated read; with a real client key that read passed against production on 4 October 2026.
 
 For the bundled example, copy `.env.example` to `.env`, supply your key, and run `npm run example`. The ordinary test suite stays offline. Never commit `.env` or a real client key.
 
